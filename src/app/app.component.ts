@@ -11,4 +11,18 @@ import { HeaderComponent } from "./header/header.component";
 })
 export class AppComponent {
   title = 'portfolio-app';
+  myName = 'Alro John T. Mercado';
+
+  language_logo = [
+    'assets/logos/nodejs.png',
+    'assets/logos/firebase.png',
+    'assets/logos/mysql.png',
+    'assets/logos/angular.png',
+    'assets/logos/ts.png',
+    'assets/logos/js.png',
+    'assets/logos/php.png',
+    'assets/logos/html.png',
+    'assets/logos/css.png',
+    'assets/logos/tailwind.png',
+  ]
 }

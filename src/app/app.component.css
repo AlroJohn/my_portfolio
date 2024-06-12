@@ -9,17 +9,20 @@
     scroll-behavior: smooth;
 }
 .header{
-    height: calc(100vh - 90vh);
+    height: calc(100dvh - 90dvh);
     position: sticky;
     top: 0;
     background: rgb(255, 255, 255); /* Ensure background color so content does not show through */
     z-index: 1000;
 }
+.hero-section{
+    height: calc(100dvh - 10dvh);
+}
 .body{
-    height: calc(100vh - 10vh);
+    height: calc(100dvh - 10dvh);
 }
 .footer{
-    height: 40vh;
+    height: 40dvh;
 }
 
 .location {
