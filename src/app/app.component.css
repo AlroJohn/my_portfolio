@@ -11,9 +11,6 @@
     background: rgb(255, 255, 255); /* Ensure background color so content does not show through */
     z-index: 1000;
 }
-.hero-section{
-    height: calc(100dvh - 10dvh);
-}
 @media screen and (max-width: 768px) {
     .hero-section{
         height: fit-content;
