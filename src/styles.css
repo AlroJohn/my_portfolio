@@ -12,3 +12,11 @@ html {
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+
+/* styles.css */
+@layer utilities {
+    .h-dynamic {
+      height: calc(100dvh - 10dvh);
+    }
+  }
+  

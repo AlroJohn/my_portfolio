@@ -1,18 +1,19 @@
-<div class="content h-full text-gray-800 bg-slate-50">
-  <div class="header shadow-sm flex justify-between items-center px-12 bg-slate-50">
+<div class="content h-full w-full text-gray-800 bg-slate-50">
+  <div class="header w-100dvw shadow-sm flex justify-between items-center px-12 bg-slate-50 border border-black">
+    <div class="lg:hidden block">hamborger</div>
     <div>
-      <h1 class="text-lg font-bold">Alro.dev</h1>
+      <h1 class="text-lg font-bold ">Alro.dev</h1>
     </div>
-    <div class="flex gap-2 font-medium">
-      <div class="cursor-pointer p-2" (click)="scrollToElement(home)">Home</div>
-      <div class="cursor-pointer p-2"><a href="#about">About</a></div>
-      <div class="cursor-pointer p-2"><a href="#projects">Projects</a></div>
-      <div class="cursor-pointer p-2"><a href="#contact">Contact</a></div>
+    <div class="lg:flex gap-2 font-medium hidden">
+      <div class="cursor-pointer p-2" (click)="scrollToElementWithOffset(home)">Home</div>
+      <div class="cursor-pointer p-2" (click)="scrollToElementWithOffset(about)">About</div>
+      <div class="cursor-pointer p-2" (click)="scrollToElementWithOffset(projects)">Projects</div>
+      <div class="cursor-pointer p-2" (click)="scrollToElementWithOffset(contact)">Contact</div>
     </div>
   </div>
-  <div class="hero-section flex flex-col gap-8 justify-center items-center" #home>
+  <div class="lg:h-dynamic md:h-dynamic h-dvh flex flex-col lg:gap-8 gap-16 justify-center items-center p-4" #home>
     <!-- Content -->
-    <div class="flex justify-center items-center gap-x-12 pb-20">
+    <div class="flex lg:flex-row md:flex-row flex-col-reverse justify-center items-center gap-x-12 gap-y-12 pb-20">
       <div class="flex flex-col gap-y-6">
         <p class="text-5xl font-extrabold">Full Stack Web <br> Developer</p>
         <p class="text-lg font-medium">Hi, I'm {{myName}}. A Full-stack Web <br> Developer
@@ -37,11 +38,11 @@
         </div>
       </div>
       <div class=" rounded-full shadow-2xl">
-        <img src="assets/images/me.jpg" class="h-64 w-64 rounded-full" alt="Alro John T. Mercado">
+        <img src="assets/images/alro.jpeg" class="h-64 w-64 rounded-full" alt="Alro John T. Mercado">
       </div>
     </div>
     <!-- Make this aligned with the  -->
-    <div class=" flex justify-center items-center gap-4">
+    <div class="lg:flex md:flex hidden justify-center items-center gap-4 ">
       <h1 class="text-xl font-semibold">Tech Stack</h1>
       <div class="border-[1.3px] border-black h-6 "></div>
       <div class="flex gap-4 pl-12">
@@ -52,14 +53,13 @@
     </div>
   </div>
 
-  <div class="body h-full w-full border-4 border-blue-500" id="about">
+  <div class="body h-full w-full border-4 border-blue-500" #about>
     <div>Old</div>
   </div>
-  <div class="body w-full border-4 border-green-500" id="projects">
+  <div class="body w-full border-4 border-green-500" #projects>
     <div>New</div>
   </div>
-  <div class="footer w-full border-4 border-indigo-500" id="contact">
+  <div class="footer w-full border-4 border-indigo-500" #contact>
     <div>footer</div>
   </div>
-
 </div>

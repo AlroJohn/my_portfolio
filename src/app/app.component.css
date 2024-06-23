@@ -4,7 +4,7 @@
 .content::-webkit-scrollbar{
     display: none;
 }
-.header{
+.header{ 
     height: calc(100dvh - 90dvh);
     position: sticky;
     top: 0;
@@ -13,6 +13,11 @@
 }
 .hero-section{
     height: calc(100dvh - 10dvh);
+}
+@media screen and (max-width: 768px) {
+    .hero-section{
+        height: fit-content;
+    }
 }
 .body{
     height: calc(100dvh - 10dvh);

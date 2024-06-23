@@ -1,4 +1,4 @@
-import { Component, ElementRef } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from "./header/header.component";
 import { CommonModule } from '@angular/common';
@@ -11,6 +11,23 @@ import { CommonModule } from '@angular/common';
     imports: [RouterOutlet, HeaderComponent, CommonModule]
 })
 export class AppComponent {
+  @ViewChild('home', { static: true }) home!: ElementRef;
+  @ViewChild('about', { static: true }) about!: ElementRef;
+  @ViewChild('projects', { static: true }) projects!: ElementRef;
+  @ViewChild('contact', { static: true }) contact!: ElementRef;
+
+  scrollToElementWithOffset(element: HTMLElement): void {
+    const header = document.querySelector('.header') as HTMLElement;
+    const headerHeight = header.offsetHeight;
+    const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+    const offsetPosition = elementPosition - headerHeight;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
+  }
+  
 
   constructor(private elementRef: ElementRef) {}
 
@@ -24,7 +41,7 @@ export class AppComponent {
     'assets/logos/angular.png',
     'assets/logos/ts.png',
     'assets/logos/js.png',
-    'assets/logos/php.png',
+    // 'assets/logos/php.png',
     'assets/logos/html.png',
     'assets/logos/css.png',
     'assets/logos/tailwind.png',
