@@ -16,9 +16,13 @@
         height: fit-content;
     }
 }
-.body{
-    height: calc(100dvh - 10dvh);
-}
+
+.body {
+    height: calc(100vh - 10vh); /* Adjust height as per your requirement */
+    overflow: hidden; /* Prevent overflow within sections */
+    scroll-snap-align: start; /* Enable scroll snap alignment */
+  }
+  
 .footer{
     height: 40dvh;
 }
@@ -31,3 +35,20 @@
 .location svg {
     margin-left: 0.5em; /* Adjust the margin as needed */
 }
+
+/* your-component.component.css */
+.body {
+    height: calc(100vh - 10vh);
+    overflow: hidden;
+    scroll-snap-align: start;
+  }
+  .glassmorphism {
+    
+    background-color: transparent;
+    backdrop-filter: blur(16px);
+    background-image: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0.32),
+        rgba(0, 0, 0, 0.2)
+    );
+  }
