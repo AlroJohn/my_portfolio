@@ -1,83 +1,66 @@
 <div class="content h-full w-full text-gray-800 bg-slate-50">
-  <div class="header w-100dvw shadow-sm flex justify-between items-center px-12 bg-slate-50 border border-black">
+  <div class="header w-100dvw  flex justify-between items-center px-6">
     <div class="lg:hidden block">hamborger</div>
     <div>
       <h1 class="text-lg font-bold ">Alro.dev</h1>
     </div>
-    <div class="lg:flex gap-2 font-medium hidden">
+    <div class="lg:flex gap-4 font-medium hidden">
       <div class="cursor-pointer p-2" (click)="scrollToElementWithOffset(home)">Home</div>
       <div class="cursor-pointer p-2" (click)="scrollToElementWithOffset(about)">About</div>
       <div class="cursor-pointer p-2" (click)="scrollToElementWithOffset(projects)">Projects</div>
       <div class="cursor-pointer p-2" (click)="scrollToElementWithOffset(contact)">Contact</div>
     </div>
   </div>
-  <div class="lg:h-dynamic md:h-dynamic h-dvh flex flex-col lg:gap-8 gap-16 justify-center items-center p-4" #home>
-    <!-- Content -->
-    <div class="flex lg:flex-row md:flex-row flex-col-reverse justify-center items-center gap-x-12 gap-y-12 pb-20">
-      <div class="flex flex-col gap-y-6">
-        <p class="text-5xl font-extrabold" [@translateLeft]>Full Stack Web <br> Developer</p>
-        <p class="text-lg font-medium">Hi, I'm {{myName}}. A Full-stack Web <br> Developer
-          based in <span class="location">Philippines.
-            <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 512 512">
-              <path fill="#d5dee4"
-                d="M256 504.575c-13.382 0-18.231-10.848-18.231-24.23l-6-323.28c0-13.382 10.848-24.23 24.23-24.23s24.23 10.848 24.23 24.23l-6 323.28c.001 13.382-4.847 24.23-18.229 24.23" />
-              <path fill="#bccbd3"
-                d="M256 132.834c-13.382 0-24.23 10.848-24.23 24.23l1.752 94.386C240.745 253.119 248.27 254 256 254s15.255-.881 22.479-2.549l1.752-94.386c-.001-13.382-10.849-24.231-24.231-24.231" />
-              <circle cx="256" cy="112" r="111" fill="#ff473e" />
-              <ellipse cx="194.399" cy="60.749" fill="#fd7085" rx="19.076" ry="32.428"
-                transform="rotate(33.488 194.39 60.752)" />
-            </svg>
-          </span>
-        </p>
-        <div class="flex justify-start items-center gap-4">
-          @for (img of message_logo; track $index) {
-          <a href="{{img.link}}" target="_blank">
-            <img src="{{img.path}}" alt="Logos" height="{{img.height}}" width="{{img.width}}">
-          </a>
+  <div class="container">
+    <section class="home flex flex-col" #home>
+      <!-- Content -->
+      <div class="flex lg:flex-row md:flex-row flex-col-reverse justify-center items-center gap-x-12 gap-y-12 pb-20">
+        <div class="flex flex-col gap-y-6">
+          <p class="text-5xl font-extrabold" [@translateLeft]>Full Stack Web <br> Developer</p>
+          <p class="text-lg font-medium">Hi, I'm {{myName}}. A Full-stack Web <br> Developer
+            based in <span class="location">Philippines.
+              <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 512 512">
+                <path fill="#d5dee4"
+                  d="M256 504.575c-13.382 0-18.231-10.848-18.231-24.23l-6-323.28c0-13.382 10.848-24.23 24.23-24.23s24.23 10.848 24.23 24.23l-6 323.28c.001 13.382-4.847 24.23-18.229 24.23" />
+                <path fill="#bccbd3"
+                  d="M256 132.834c-13.382 0-24.23 10.848-24.23 24.23l1.752 94.386C240.745 253.119 248.27 254 256 254s15.255-.881 22.479-2.549l1.752-94.386c-.001-13.382-10.849-24.231-24.231-24.231" />
+                <circle cx="256" cy="112" r="111" fill="#ff473e" />
+                <ellipse cx="194.399" cy="60.749" fill="#fd7085" rx="19.076" ry="32.428"
+                  transform="rotate(33.488 194.39 60.752)" />
+              </svg>
+            </span>
+          </p>
+          <div class="flex justify-start items-center gap-4">
+            @for (img of message_logo; track $index) {
+            <a href="{{img.link}}" target="_blank">
+              <img src="{{img.path}}" alt="Logos" height="{{img.height}}" width="{{img.width}}">
+            </a>
+            }
+          </div>
+        </div>
+        <div class=" rounded-full shadow-slate-400 shadow-2xl" id="scrolled_right" [@translateRight]>
+          <img src="assets/images/alro.jpeg" class="h-64 w-64 rounded-full" alt="Alro John T. Mercado">
+        </div>
+      </div>
+      <div class="lg:flex md:flex hidden justify-center items-center gap-4 ">
+        <h1 class="text-xl font-semibold">Tech Stack</h1>
+        <div class="border-[1.3px] border-black h-6 "></div>
+        <div class="flex gap-4 pl-12">
+          @for (logo of language_logo; track $index) {
+          <img src="{{logo}}" alt="logos" class="h-10 w-10" id="scrolled_right" [@translateRight]>
           }
         </div>
       </div>
-      <div class=" rounded-full shadow-2xl" id="scrolled_right" [@translateRight]>
-        <img src="assets/images/alro.jpeg" class="h-64 w-64 rounded-full" alt="Alro John T. Mercado">
-      </div>
-    </div>
-    <div class="lg:flex md:flex hidden justify-center items-center gap-4 ">
-      <h1 class="text-xl font-semibold">Tech Stack</h1>
-      <div class="border-[1.3px] border-black h-6 "></div>
-      <div class="flex gap-4 pl-12">
-        @for (logo of language_logo; track $index) {
-        <img src="{{logo}}" alt="logos" class="h-10 w-10" id="scrolled_right" [@translateRight]>
-        }
-      </div>
-    </div>
-  </div>
 
-  <div class="body bg-slate-50" #about>
-    <div class="flex gap-12 justify-center items-center h-full w-full">
-        <img class="h-4/5 -mr-16 rounded-xl" src="assets/images/ako.jpg" alt="">
-        <p class="w-2/6 glassmorphism p-4 rounded-e-xl h-4/5">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Et commodi voluptatibus saepe quidem nemo dicta suscipit deserunt consectetur,
-          modi labore? Aperiam esse, corporis quia repellendus inventore sequi eligendi
-          delectus assumenda?
-          Et commodi voluptatibus saepe quidem nemo dicta suscipit deserunt consectetur,
-          modi labore? Aperiam esse, corporis quia repellendus inventore sequi eligendi
-          delectus assumenda?
-
-          Et commodi voluptatibus saepe quidem nemo dicta suscipit deserunt consectetur,
-          modi labore? Aperiam esse, corporis quia repellendus inventore sequi eligendi
-          delectus assumenda?
-
-          Et commodi voluptatibus saepe quidem nemo dicta suscipit deserunt consectetur,
-          modi labore? Aperiam esse, corporis quia repellendus inventore sequi eligendi
-          delectus assumenda?
-        </p>
-    </div>
-  </div>
-
-  <div class="body w-full border-4 border-green-500" #projects>
-    <div>New</div>
-  </div>
-  <div class="footer w-full border-4 border-indigo-500" #contact>
-    <div>footer</div>
+    </section>
+    <section class="about" #about>
+      <div>About</div>
+    </section>
+    <section class="projects" #projects>
+      <div>New</div>
+    </section>
+    <section class="contacts" #contact>
+      <div>footer</div>
+    </section>
   </div>
 </div>

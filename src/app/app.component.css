@@ -1,54 +1,58 @@
-*{
-    font-family: Arial, Helvetica, sans-serif;
+* {
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
 }
-.content::-webkit-scrollbar{
-    display: none;
+.content::-webkit-scrollbar {
+  display: none;
 }
-.header{ 
-    height: calc(100dvh - 90dvh);
-    position: sticky;
-    top: 0;
-    background: rgb(255, 255, 255); /* Ensure background color so content does not show through */
-    z-index: 1000;
+.header {
+  height: 10dvh;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #ffffff;
+  display: flex;
 }
-@media screen and (max-width: 768px) {
-    .hero-section{
-        height: fit-content;
-    }
+.content {
+  background: #ffffff;
+  width: 100dvw;
+  height: 100dvh;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  transition: all 1s ease-in-out;
+  scroll-behavior: smooth;
 }
-
-.body {
-    height: calc(100vh - 10vh); /* Adjust height as per your requirement */
-    overflow: hidden; /* Prevent overflow within sections */
-    scroll-snap-align: start; /* Enable scroll snap alignment */
-  }
-  
-.footer{
-    height: 40dvh;
-}
-
-.location {
-    display: inline-flex;
-    align-items: center;
-}
-
-.location svg {
-    margin-left: 0.5em; /* Adjust the margin as needed */
+section {
+  width: 100dvw;
+  height: calc(100dvh - 10dvh);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
 }
 
-/* your-component.component.css */
-.body {
-    height: calc(100vh - 10vh);
-    overflow: hidden;
-    scroll-snap-align: start;
-  }
-  .glassmorphism {
-    
-    background-color: transparent;
-    backdrop-filter: blur(16px);
-    background-image: linear-gradient(
-        120deg,
-        rgba(255, 255, 255, 0.32),
-        rgba(0, 0, 0, 0.2)
-    );
-  }
+.home {
+  height: 100dvh;
+}
+.about {
+  height: 100dvh;
+}
+.projects {
+  height: 100dvh;
+}
+.contacts {
+  height: 100dvh;
+}
+
+/* .glassmorphism {
+  -webkit-backdrop-filter: blur(16px);
+  background-color: transparent;
+  backdrop-filter: blur(16px);
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.32),
+    rgba(0, 0, 0, 0.2)
+  );
+} */
