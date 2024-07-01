@@ -1,12 +1,6 @@
-* {
-  margin: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-  font-family: "Poppins", sans-serif;
-}
-.content::-webkit-scrollbar {
+/* .content::-webkit-scrollbar {
   display: none;
-}
+} */
 .header {
   height: 10dvh;
   position: sticky;
@@ -17,34 +11,116 @@
 }
 .content {
   background: #ffffff;
-  width: 100dvw;
-  height: 100dvh;
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
   transition: all 1s ease-in-out;
   scroll-behavior: smooth;
+  border: black solid 1px;
 }
-section {
-  width: 100dvw;
-  height: calc(100dvh - 10dvh);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  scroll-snap-align: start;
+
+.image img{
+  border-radius: 30px;
+}
+
+.my_logo{
+  animation: fadeInOut both;
+  animation-timeline: view(10% 80%);
+}
+.my_title {
+  animation: fadeInOut both;
+  animation-timeline: view(10% 80%);
+}
+
+.my_tech {
+  animation: fadeInOut both;
+  animation-timeline: view(20% 50%);
+}
+
+.language_logo {
+  animation: fadeInOut both;
+  animation-timeline: view(20% 50%);
+}
+
+.fadeInOut {
+  animation: fadeInOut both;
+  animation-timeline: view(20% 50%);
+}
+@keyframes fadeInOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+
+.scaleAbout {
+  animation: scaleBig both;
+  animation-timeline: view(80% 5%);
+}
+
+@keyframes scaleBig {
+  from {
+    transform: scale(0.3);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 .home {
-  height: 100dvh;
+  border: black 1px solid;
+  
 }
 .about {
-  height: 100dvh;
+  border: black 1px solid;
 }
 .projects {
-  height: 100dvh;
+  border: black 1px solid;
 }
 .contacts {
-  height: 100dvh;
+  border: black 1px solid;
 }
+
+@media screen and (min-width: 1080px) {
+  .my_logo.leavingRight {
+    animation: autoHideAnimationRight both;
+    animation-timeline: view(20% 70%);
+  }
+}
+
+
+@keyframes movingShadow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animated-shadow {
+  background: linear-gradient(
+    45deg,
+    #989898,
+    #616161,
+    #5e5a54,
+    #745f54,
+    #45392c
+  );
+  background-size: 300% 300%;
+  animation: movingShadow 10s ease infinite;
+
+  transition: all 0.3s ease;
+}
+
+.group:hover .animated-shadow {
+  filter: blur(20px);
+  opacity: 0.9;
+}
+
 
 /* .glassmorphism {
   -webkit-backdrop-filter: blur(16px);

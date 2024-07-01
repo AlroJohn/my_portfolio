@@ -1,65 +1,98 @@
-<div class="content h-full w-full text-gray-800 bg-slate-50">
-  <div class="header w-100dvw  flex justify-between items-center px-6">
+<div class="content w-dvw text-gray-800 bg-slate-50 ">
+  <div class="header flex justify-between items-center px-16">
     <div class="lg:hidden block">hamborger</div>
     <div>
-      <h1 class="text-lg font-bold ">Alro.dev</h1>
+      <h1 class="text-xl font-bold">Alro.dev</h1>
     </div>
     <div class="lg:flex gap-4 font-medium hidden">
-      <div class="cursor-pointer p-2" (click)="scrollToElementWithOffset(home)">Home</div>
-      <div class="cursor-pointer p-2" (click)="scrollToElementWithOffset(about)">About</div>
-      <div class="cursor-pointer p-2" (click)="scrollToElementWithOffset(projects)">Projects</div>
-      <div class="cursor-pointer p-2" (click)="scrollToElementWithOffset(contact)">Contact</div>
+      <a href="#home">
+        <div class="cursor-pointer p-2">Home</div>
+      </a>
+      <a href>
+        <div class="cursor-pointer p-2">About</div>
+      </a>
+      <div class="cursor-pointer p-2">Projects</div>
+      <div class="cursor-pointer p-2">Contact</div>
     </div>
   </div>
-  <div class="container">
-    <section class="home flex flex-col" #home>
+  <div class="">
+    <section class="home w-full h-[90dvh] flex flex-col justify-center items-center" id="home">
       <!-- Content -->
-      <div class="flex lg:flex-row md:flex-row flex-col-reverse justify-center items-center gap-x-12 gap-y-12 pb-20">
+      <div
+        class="flex lg:flex-row md:flex-row flex-col-reverse justify-center items-center gap-x-12 gap-y-12 pb-20 mt-12">
         <div class="flex flex-col gap-y-6">
-          <p class="text-5xl font-extrabold" [@translateLeft]>Full Stack Web <br> Developer</p>
-          <p class="text-lg font-medium">Hi, I'm {{myName}}. A Full-stack Web <br> Developer
-            based in <span class="location">Philippines.
-              <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 512 512">
-                <path fill="#d5dee4"
-                  d="M256 504.575c-13.382 0-18.231-10.848-18.231-24.23l-6-323.28c0-13.382 10.848-24.23 24.23-24.23s24.23 10.848 24.23 24.23l-6 323.28c.001 13.382-4.847 24.23-18.229 24.23" />
-                <path fill="#bccbd3"
-                  d="M256 132.834c-13.382 0-24.23 10.848-24.23 24.23l1.752 94.386C240.745 253.119 248.27 254 256 254s15.255-.881 22.479-2.549l1.752-94.386c-.001-13.382-10.849-24.231-24.231-24.231" />
-                <circle cx="256" cy="112" r="111" fill="#ff473e" />
-                <ellipse cx="194.399" cy="60.749" fill="#fd7085" rx="19.076" ry="32.428"
-                  transform="rotate(33.488 194.39 60.752)" />
-              </svg>
-            </span>
+          <p class="my_title leavingLeft text-5xl md:text-left text-center font-extrabold " [@translateLeft]>
+            Front End Web <br />
+            Developer
           </p>
-          <div class="flex justify-start items-center gap-4">
+          <div class="fadeInOut text-lg font-medium text-left w-96 md:p-0 p-4">
+            Hi, I'm {{ myName }}. A Front-end Web
+            Developer based in Philippines.
+            <svg class="inline-block align-middle" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
+              viewBox="0 0 512 512">
+              <path fill="#d5dee4"
+                d="M256 504.575c-13.382 0-18.231-10.848-18.231-24.23l-6-323.28c0-13.382 10.848-24.23 24.23-24.23s24.23 10.848 24.23 24.23l-6 323.28c.001 13.382-4.847 24.23-18.229 24.23" />
+              <path fill="#bccbd3"
+                d="M256 132.834c-13.382 0-24.23 10.848-24.23 24.23l1.752 94.386C240.745 253.119 248.27 254 256 254s15.255-.881 22.479-2.549l1.752-94.386c-.001-13.382-10.849-24.231-24.231-24.231" />
+              <circle cx="256" cy="112" r="111" fill="#ff473e" />
+              <ellipse cx="194.399" cy="60.749" fill="#fd7085" rx="19.076" ry="32.428"
+                transform="rotate(33.488 194.39 60.752)" />
+            </svg>
+          </div>
+          <div class="fadeInOut flex justify-start items-center gap-4 md:p-0 p-4">
             @for (img of message_logo; track $index) {
-            <a href="{{img.link}}" target="_blank">
-              <img src="{{img.path}}" alt="Logos" height="{{img.height}}" width="{{img.width}}">
+            <a (click)="openLink(img.link, img.isGmail)" style="cursor: pointer">
+              <img [src]="img.path" alt="Logos" [height]="img.height" [width]="img.width" />
             </a>
             }
           </div>
         </div>
-        <div class=" rounded-full shadow-slate-400 shadow-2xl" id="scrolled_right" [@translateRight]>
-          <img src="assets/images/alro.jpeg" class="h-64 w-64 rounded-full" alt="Alro John T. Mercado">
+        <div class="my_logo rounded-full shadow-slate-400 shadow-2xl" id="scrolled_right" [@translateRight]>
+          <img src="assets/images/alro.jpeg" class="h-72 w-72 rounded-full" alt="Alro John T. Mercado" />
         </div>
       </div>
-      <div class="lg:flex md:flex hidden justify-center items-center gap-4 ">
-        <h1 class="text-xl font-semibold">Tech Stack</h1>
-        <div class="border-[1.3px] border-black h-6 "></div>
-        <div class="flex gap-4 pl-12">
+      <div class="lg:flex md:flex hidden justify-center items-center">
+        <div class="my_tech flex justify-center items-center gap-4">
+          <h1 class="text-xl font-semibold" [@translateLeft]>Tech Stack</h1>
+          <div class="border-[1.3px] border-black h-6"></div>
+        </div>
+        <div class="language_logo flex gap-4 pl-10">
           @for (logo of language_logo; track $index) {
-          <img src="{{logo}}" alt="logos" class="h-10 w-10" id="scrolled_right" [@translateRight]>
+          <img src="{{ logo }}" alt="logos" class="h-10 w-10 cursor-pointer" id="scrolled_right" [@translateRight] />
           }
         </div>
       </div>
+    </section>
+    <section class="about w-full h-[90dvh] flex justify-center items-center text-gray-800" id="about">
+      <div class="scaleAbout px-4 flex flex-col justify-center items-center md:gap-16 gap-8 ">
+        <div class="flex flex-col md:flex-row gap-11 items-center justify-between">
+          <div class="relative inline-block group">
+            <img src="assets/images/ako.jpg" alt="Image 1" class="w-72 h-72 object-cover rounded-lg z-10 relative">
+            <div class="absolute top-3 right-3 w-full h-full rounded-lg -z-10 animated-shadow"></div>
+          </div>
+          <div class="max-w-md">
+            <h2 class="text-4xl font-extrabold text-[#63523e] mb-4">ABOUT ME</h2>
+            <p class=" leading-relaxed">
+              I am a web developer based in Tabaco City, Albay, Philippines, passionate about creating websites and
+              applications. I specialize in translating UI/UX designs into responsive, fully functional websites and
+              applications using the latest technologies. With a keen eye for detail and a commitment to excellence, I
+              deliver high-quality digital experiences that meet my clients' needs.
+            </p>
+          </div>
+        </div>
+        <div class="grid md:grid-cols-2 grid-cols-1 gap-x-12 gap-2 w-full">
+          <h1><span class="font-bold text-lg text-[#63523e]">EMAIL:</span> {{email}}</h1>
+          <h1><span class="font-bold text-lg text-[#63523e]">EDUCATION:</span> {{college}}</h1>
+          <h1><span class="font-bold text-lg text-[#63523e]">EMPLOYMENT:</span> Open</h1>
+          <h1><span class="font-bold text-lg text-[#63523e]">POSITION:</span> {{jobPosition}}</h1>
+        </div>
+      </div>
+    </section>
 
-    </section>
-    <section class="about" #about>
-      <div>About</div>
-    </section>
-    <section class="projects" #projects>
+    <section class="projects w-full h-[90dvh]" #projects>
       <div>New</div>
     </section>
-    <section class="contacts" #contact>
+    <section class="contacts w-full h-[90dvh]" #contact>
       <div>footer</div>
     </section>
   </div>
