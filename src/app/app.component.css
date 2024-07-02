@@ -16,60 +16,50 @@
   border: black solid 1px;
 }
 
-.image img{
+.image img {
   border-radius: 30px;
 }
 
-.my_logo{
-  animation: fadeInOut both;
-  animation-timeline: view(10% 80%);
-}
-.my_title {
-  animation: fadeInOut both;
-  animation-timeline: view(10% 80%);
+@supports (animation-timeline: view()) {
+  .scaleAbout {
+    animation-timeline: view(80% 5%);
+  }
+  .my_logo {
+    animation-timeline: view(20% 70%);
+  }
+
+  .my_logo {
+    animation-timeline: view(10% 80%);
+  }
+  .my_title {
+    animation-timeline: view(10% 80%);
+  }
+
+  .my_tech {
+    animation-timeline: view(20% 50%);
+  }
+
+  .language_logo {
+    animation-timeline: view(20% 50%);
+  }
+   
+
+  .fadeInOut {
+    animation-timeline: view(20% 50%);
+  } 
 }
 
-.my_tech {
-  animation: fadeInOut both;
-  animation-timeline: view(20% 50%);
-}
-
-.language_logo {
-  animation: fadeInOut both;
-  animation-timeline: view(20% 50%);
-}
-
-.fadeInOut {
-  animation: fadeInOut both;
-  animation-timeline: view(20% 50%);
-}
-@keyframes fadeInOut {
+/* @keyframes fadeInOut {
   from {
     opacity: 1;
   }
   to {
     opacity: 0;
   }
-}
-
-
-.scaleAbout {
-  animation: scaleBig both;
-  animation-timeline: view(80% 5%);
-}
-
-@keyframes scaleBig {
-  from {
-    transform: scale(0.3);
-  }
-  to {
-    transform: scale(1);
-  }
-}
+} */
 
 .home {
   border: black 1px solid;
-  
 }
 .about {
   border: black 1px solid;
@@ -81,13 +71,27 @@
   border: black 1px solid;
 }
 
-@media screen and (min-width: 1080px) {
+/* @media screen and (min-width: 1080px) {
   .my_logo.leavingRight {
     animation: autoHideAnimationRight both;
     animation-timeline: view(20% 70%);
   }
-}
+} */
 
+/* 
+@supports not (animation-timeline: view()) {
+  Fallback for browsers that don't support scroll-driven animations
+  .scaleAbout {
+    opacity: 0;
+    transform: scale(0.3);
+    transition: opacity 0.5s, transform 0.5s;
+  }
+
+  .scaleAbout.visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+} */
 
 @keyframes movingShadow {
   0% {
@@ -120,7 +124,6 @@
   filter: blur(20px);
   opacity: 0.9;
 }
-
 
 /* .glassmorphism {
   -webkit-backdrop-filter: blur(16px);
