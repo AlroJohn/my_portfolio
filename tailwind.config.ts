@@ -9,8 +9,20 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        "pri":{
+          0: "#fafaf9",
+          1: "#52575D",
+          2: "#000000",
+          3: "#DFD8C8",
+          4: "#1f1617",
+        },
+        "sec": {
+          // 0: "#f0f0f0",
+          // 1: "#a6a6a6",
+          // 2: "#a6a6a6",
+          // 3: "#a6a6a6",
+          4: "#726668",
+        }
       },
     },
   },
