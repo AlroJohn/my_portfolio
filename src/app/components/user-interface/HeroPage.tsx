@@ -10,7 +10,7 @@ export const HeroPage = () => {
           <div className="w-full h-full flex justify-center items-center border border-black relative">
             {/* Rotating blue circle with animated border radius */}
             <motion.div
-              className="absolute w-72 h-72 rounded-full bg-blue-500 overflow-hidden"
+              className="absolute w-72 h-72 rounded-full shadow-lg shadow-slate-400 overflow-hidden"
               animate={{
                 borderRadius: [
                   "50% 70% 30% 70% / 50% 30% 70% 30%",
@@ -22,6 +22,7 @@ export const HeroPage = () => {
                 duration: 5,
                 repeat: Infinity,
                 ease: "easeInOut",
+                repeatType: "mirror", // ensures smooth back-and-forth motion
               }}
             >
               {/* Static image filling the entire rotating blue div */}
