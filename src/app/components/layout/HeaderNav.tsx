@@ -2,10 +2,10 @@ export const HeaderNav = () => {
     return(
         <div className="w-full h-[10dvh] ">
             <div className="w-full border border-black h-full flex justify-between items-center mx-auto">
-                <h1>Logo here</h1>
-                <div className="flex flex-row gap-6">
+                <h1 className="font-medium text-lg font-sans">Alro.dev</h1>
+                <div className="flex flex-row gap-8">
                     {menu.map((item) => (
-                        <div>
+                        <div className="font-medium cursor-pointer">
                             {item.name}
                         </div>
                     ))}
