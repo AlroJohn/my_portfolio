@@ -36,14 +36,14 @@ export const HeroPage = () => {
   return (
     <div className="w-full h-[calc(100vh-10dvh)] flex justify-center items-center ">
       <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
+        initial={{ opacity: 0, scale: 0.6 }}
         whileInView={{ opacity: 1, scale: 1 }} // Fades out when the component scrolls out of view
         viewport={{
           amount: 0.5, // Starts fading out when 50% of the component is out of view
           once: false, // Keeps repeating the animation on scroll
         }}
         transition={{ duration: 1 }} // Adjust transition duration
-        className="w-full max-w-screen-md border border-black h-fit flex flex-col gap-8 py-4"
+        className="w-full max-w-screen-md h-fit flex flex-col gap-8 py-4"
       >
         <div className="w-full flex justify-center items-center">
           <div className="w-fit md:h-80 h-fit flex md:flex-row flex-col-reverse justify-center items-center">
@@ -76,7 +76,7 @@ export const HeroPage = () => {
 
 const LeftSide = () => {
   return (
-    <div className="h-full flex flex-col justify-center items-start gap-4 px-4 border border-black">
+    <div className="h-full flex flex-col justify-center items-start gap-4 px-4">
       <h1 className="lg:text-5xl md:text-4xl text-3xl md:text-left font-extrabold max-w-96">
         Front End Web Developer
       </h1>
@@ -139,7 +139,7 @@ const LeftSide = () => {
 
 const Rightside = () => {
   return (
-    <div className="md:w-80 w-full h-80 flex justify-center items-center relative border border-black">
+    <div className="md:w-80 w-full h-80 flex justify-center items-center relative">
       {/* Rotating blue circle with animated border radius */}
       <motion.div
         className="absolute md:w-72 md:h-72 w-64 h-64 rounded-full shadow-profile shadow-sec-4  overflow-hidden"
