@@ -1,5 +1,4 @@
-import Image from "next/image";
-import { Children } from "react";
+
 import { HeroPage } from "./components/user-interface/HeroPage";
 import { About } from "./components/user-interface/About";
 import { Projects } from "./components/user-interface/Projects";

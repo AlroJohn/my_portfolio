@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
 import { HeaderNav } from "./components/layout/HeaderNav";
 import { Footer } from "./components/layout/Footer";
@@ -27,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-pri-0 text-pri-4 flex flex-col font-sans md:max-w-[75%] w-full h-full mx-auto">
+      <body className="bg-pri-0 text-pri-4 flex flex-col md:max-w-[75%] w-full h-full mx-auto">
         <HeaderNav />
         {children}
         <Footer />
