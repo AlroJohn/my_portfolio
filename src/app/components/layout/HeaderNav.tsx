@@ -1,9 +1,9 @@
 export const HeaderNav = () => {
     return(
-        <div className="w-full h-[10dvh] ">
-            <div className="w-full border border-black h-full flex justify-between items-center mx-auto">
-                <h1 className="font-medium text-lg font-sans">Alro.dev</h1>
-                <div className="flex flex-row gap-8">
+        <div className="w-full h-[10dvh] sticky top-0 z-50 bg-pri-0">
+            <div className="w-full border border-black h-full flex justify-between items-center px-4 mx-auto">
+                <h1 className="font-bold text-xl font-sans">Alro.dev</h1>
+                <div className="flex flex-row gap-8 ">
                     {menu.map((item) => (
                         <div className="font-medium cursor-pointer">
                             {item.name}

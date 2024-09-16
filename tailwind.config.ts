@@ -24,6 +24,10 @@ const config: Config = {
           4: "#726668",
         }
       },
+      boxShadow: {
+        'profile': '0 0px 20px 0px rgba(0, 0, 0, 0.3)',
+      }
+      
     },
   },
   plugins: [],

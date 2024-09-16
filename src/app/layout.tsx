@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-pri-0 text-pri-4 flex flex-col font-sans max-w-[75%] h-full mx-auto">
+      <body className="bg-pri-0 text-pri-4 flex flex-col font-sans max-w-[75%] w-full h-full mx-auto">
         <HeaderNav />
         {children}
         <Footer />
