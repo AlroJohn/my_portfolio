@@ -81,7 +81,7 @@ const LeftSide = () => {
         Front End Web Developer
       </h1>
       <div className=" text-lg font-medium text-left max-w-96 w-full">
-        Hi, I'm {myName}. A Front-end Web Developer based in Philippines.
+        Hi, I&apos;m {myName}. A Front-end Web Developer based in Philippines.
         <svg
           className="inline-block align-middle"
           xmlns="http://www.w3.org/2000/svg"

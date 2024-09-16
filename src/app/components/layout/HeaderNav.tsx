@@ -4,8 +4,8 @@ export const HeaderNav = () => {
             <div className="w-full border border-black h-full flex justify-between items-center px-4 mx-auto">
                 <h1 className="font-bold text-xl font-sans">Alro.dev</h1>
                 <div className="md:flex hidden flex-row gap-8 ">
-                    {menu.map((item) => (
-                        <div className="font-medium cursor-pointer">
+                    {menu.map((item, index) => (
+                        <div key={index} className="font-medium cursor-pointer">
                             {item.name}
                         </div>
                     ))}
