@@ -1,5 +1,5 @@
 export const About = () => {
     return(
-        <div>About</div>
+        <div className="w-full h-[calc(100vh-10dvh)]">About</div>
     )
 }

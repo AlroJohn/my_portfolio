@@ -21,8 +21,8 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.3, // Stagger each icon's animation by 0.5 seconds
-      delayChildren: 0.3,   // Delay the start of animations for the icons
+      staggerChildren: 0.3, // Stagger each icon's animation by 0.3 seconds
+      delayChildren: 0.3, // Delay the start of animations for the icons
     },
   },
 };
@@ -34,16 +34,25 @@ const itemVariants = {
 
 export const HeroPage = () => {
   return (
-    <div className="w-full h-[calc(100vh-10dvh)]">
-      <div className="w-full max-w-screen-md border border-black h-full flex flex-col gap-8 justify-center items-center mx-auto">
-        <div className="w-full flex justify-center items-center  ">
-          <div className="w-fit h-80 flex justify-center items-center">
+    <div className="w-full h-[calc(100vh-10dvh)] flex justify-center items-center ">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        whileInView={{ opacity: 1, scale: 1 }} // Fades out when the component scrolls out of view
+        viewport={{
+          amount: 0.5, // Starts fading out when 50% of the component is out of view
+          once: false, // Keeps repeating the animation on scroll
+        }}
+        transition={{ duration: 1 }} // Adjust transition duration
+        className="w-full max-w-screen-md border border-black h-fit flex flex-col gap-8 py-4"
+      >
+        <div className="w-full flex justify-center items-center">
+          <div className="w-fit md:h-80 h-fit flex md:flex-row flex-col-reverse justify-center items-center">
             {/* left side */}
             <motion.div
               initial={{ opacity: 0, x: -150 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1.5 }}
-              className="w-full h-full flex justify-end"
+              className="w-full h-fit flex md:justify-end justify-center"
             >
               <LeftSide />
             </motion.div>
@@ -52,41 +61,26 @@ export const HeroPage = () => {
               initial={{ opacity: 0, x: 150 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1.5 }}
-              className="w-full flex justify-start"
+              className="h-fit w-full flex justify-start"
             >
               <Rightside />
             </motion.div>
           </div>
         </div>
-        <div className="flex gap-4 justify-center items-center">
-          <h6 className="font-semibold text-xl">Tech Stack</h6>
-          <span className="border-[1.3px] border-black h-6"></span>
-          <motion.div
-            className="flex justify-center items-center gap-6"
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-          >
-            {iconsName.map((icon) => (
-              <motion.div key={icon.id} variants={itemVariants}>
-                <Icon icon={icon.icon} width="35" height="35" />
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </div>
+        {/* Tech Stack */}
+        <TechStack />
+      </motion.div>
     </div>
   );
 };
 
 const LeftSide = () => {
   return (
-    <div className="h-full flex flex-col justify-center items-start gap-4 px-4">
-      <h1 className="my_title lg:text-5xl md:text-4xl text-3xl md:text-left text-center font-extrabold ">
-        Front End Web <br />
-        Developer
+    <div className="h-full flex flex-col justify-center items-start gap-4 px-4 border border-black">
+      <h1 className="lg:text-5xl md:text-4xl text-3xl md:text-left font-extrabold max-w-96">
+        Front End Web Developer
       </h1>
-      <div className=" text-lg font-medium text-left w-96 md:p-0 p-4">
+      <div className=" text-lg font-medium text-left max-w-96 w-full">
         Hi, I'm {myName}. A Front-end Web Developer based in Philippines.
         <svg
           className="inline-block align-middle"
@@ -134,16 +128,21 @@ const LeftSide = () => {
           height="30"
         />
       </div>
+      <div className="block md:hidden pt-4">
+          <button className="max-w-32 w-full py-2 px-4 rounded-md bg-pri-4 text-pri-3 hover:bg-sec-4 hover:text-pri-4 duration-300" type="button">
+            Tech Stack
+          </button>
+      </div>
     </div>
   );
 };
 
 const Rightside = () => {
   return (
-    <div className="w-80 h-full flex justify-center items-center relative">
+    <div className="md:w-80 w-full h-80 flex justify-center items-center relative border border-black">
       {/* Rotating blue circle with animated border radius */}
       <motion.div
-        className="absolute w-72 h-72 rounded-full shadow-profile shadow-sec-4  overflow-hidden"
+        className="absolute md:w-72 md:h-72 w-64 h-64 rounded-full shadow-profile shadow-sec-4  overflow-hidden"
         animate={{
           borderRadius: [
             "50% 70% 30% 70% / 50% 30% 70% 30%",
@@ -167,6 +166,30 @@ const Rightside = () => {
           alt="Profile"
         />
       </motion.div>
+    </div>
+  );
+};
+
+const TechStack = () => {
+  return (
+    <div className="h-fit flex gap-4 md:justify-center justify-start items-center px-4">
+      <div className="md:flex hidden gap-4 justify-center items-center">
+        <h6 className="font-semibold text-xl">Tech Stack</h6>
+        <span className="border-[1.3px] border-black h-6"></span>
+        <motion.div
+          className=" flex justify-center items-center gap-6"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          {iconsName.map((icon) => (
+            <motion.div key={icon.id} variants={itemVariants}>
+              <Icon icon={icon.icon} width="35" height="35" />
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+      
     </div>
   );
 };
