@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 const details = [
   {
@@ -8,6 +8,7 @@ const details = [
     jobPosition: "Frontend Developer",
   },
 ];
+
 export const About = () => {
   return (
     <div className="w-full lg:h-[calc(100vh-10dvh)] h-fit flex justify-center items-center">
@@ -16,24 +17,44 @@ export const About = () => {
         whileInView={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.6 }}
         viewport={{
-          amount: 0.5, // Starts fading out when 50% of the component is out of view
-          once: false, // Keeps repeating the animation on scroll
+          amount: 0.5, // Trigger when 50% of the element is in view
+          once: false, // Repeat animation on scroll
         }}
         transition={{ duration: 1 }}
         className="w-full max-w-screen-lg h-fit flex lg:flex-row flex-col py-4 border border-black"
       >
+        {/* Left side with the image */}
+
         <div className="lg:w-fit w-full flex justify-center lg:items-start items-center border border-black p-8">
-          <div className="relative w-80 h-80 border border-black rounded-xl">
+          <motion.div
+            initial={{ opacity: 0, x: -150 }} // Starts hidden and moved left
+            whileInView={{ opacity: 1, x: 0 }} // Animate to full opacity and original position
+            viewport={{
+              amount: 0.5, // Trigger animation when 10% of the element is in view
+            }}
+            transition={{ duration: 1.2 }} // Smooth transition
+            className="relative w-80 h-80 border border-black rounded-xl"
+          >
             <img
               className="w-full h-full object-cover object-[60%_80%] rounded-xl"
               src="/assets/hand.jpg"
               alt=""
             />
             <div className="absolute top-4 right-4 w-full h-full rounded-xl -z-10 bg-sec-4 shadow-sm shadow-sec-4"></div>
-          </div>
+          </motion.div>
         </div>
+
+        {/* Right side content */}
         <div className="w-full h-full flex justify-center items-center border border-black p-8">
-          <div className="w-full h-full flex flex-col gap-4">
+          <motion.div
+            initial={{ opacity: 0, x: 150 }} // Starts hidden and moved left
+            whileInView={{ opacity: 1, x: 0 }} // Animate to full opacity and original position
+            viewport={{
+              amount: 0.5, // Trigger animation when 10% of the element is in view
+            }}
+            transition={{ duration: 1.2 }} // Smooth transition
+            className="w-full h-full flex flex-col gap-4"
+          >
             <h2 className="text-4xl font-medium">ABOUT ME</h2>
             <p className="leading-relaxed">
               I am a web developer based in Tabaco City, Albay, Philippines,
@@ -67,7 +88,7 @@ export const About = () => {
                 </h1>
               </div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </motion.div>
     </div>

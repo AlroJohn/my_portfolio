@@ -7,7 +7,7 @@ import { Contact } from "./components/user-interface/Contact";
 export default function Home() {
   return (
     <main
-      className="flex flex-col text-pri-4 border border-black"
+      className="flex flex-col text-pri-4 border border-black "
     >
       <HeroPage />
       <About />

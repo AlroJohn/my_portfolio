@@ -39,7 +39,7 @@ export const HeroPage = () => {
         initial={{ opacity: 0, scale: 0.6 }}
         whileInView={{ opacity: 1, scale: 1 }} // Fades out when the component scrolls out of view
         viewport={{
-          amount: 0.5, // Starts fading out when 50% of the component is out of view
+          margin: "-200px", // Starts fading out when 50% of the component is out of view
           once: false, // Keeps repeating the animation on scroll
         }}
         transition={{ duration: 1 }} // Adjust transition duration
