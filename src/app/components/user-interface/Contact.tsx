@@ -1,7 +1,6 @@
 "use client";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { motion } from "framer-motion";
-import { div } from "framer-motion/client";
 
 export const Contact = () => {
   return (
