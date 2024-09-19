@@ -118,18 +118,24 @@ const LeftSide = () => {
             height="30"
           />
         </Link>
-        <Icon
-          className="text-blue-500 cursor-pointer"
-          icon="brandico:linkedin-rect"
-          width="30"
-          height="30"
-        />
-        <Icon
-          className="cursor-pointer"
-          icon="logos:google-gmail"
-          width="30"
-          height="30"
-        />
+        <Link
+          href="https://linkedin.com/in/alro-john-mercado-b676172ba"
+        >
+          <Icon
+            className="text-blue-500 cursor-pointer"
+            icon="brandico:linkedin-rect"
+            width="30"
+            height="30"
+          />
+        </Link>
+        <Link href="">
+          <Icon
+            className="cursor-pointer"
+            icon="logos:google-gmail"
+            width="30"
+            height="30"
+          />
+        </Link>
       </div>
       <div className="block md:hidden pt-4">
         <button

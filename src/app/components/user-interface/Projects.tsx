@@ -13,7 +13,7 @@ export const Projects = () => {
           once: false, // Keeps repeating the animation on scroll
         }}
         transition={{ duration: 1 }} // Adjust transition duration
-        className="w-full max-w-screen-md h-fit flex flex-col gap-8 py-4"
+        className="w-full max-w-screen-md h-fit flex flex-col py-4 border border-black p-8"
       >
         asd
       </motion.div>

@@ -42,7 +42,7 @@ const ContactInfo = () => {
               width="40"
               height="40"
             />
-            <div className="flex flex-col">
+            <div className="w-full flex flex-col">
               <span>{info.title}</span>
               <p className="text-pri-1">{info.info}</p>
             </div>
@@ -73,6 +73,6 @@ const contactInformation = [
   {
     icon: "devicon-plain:facebook",
     title: "Facebook",
-    info: "/pugz.mercado/",
+    info: "pugz.mercado",
   },
 ];
