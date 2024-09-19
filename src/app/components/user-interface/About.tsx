@@ -31,18 +31,19 @@ const LeftSide = () => {
         initial={{ opacity: 0, x: -150 }} // Starts hidden and moved left
         whileInView={{ opacity: 1, x: 0 }} // Animate to full opacity and original position
         viewport={{
-          amount: 0.5, // Trigger animation when 10% of the element is in view
-          once: true, // Repeat animation on scroll
+          amount: 0.5, // Trigger animation when 50% of the element is in view
+          once: true, // Animate only once on scroll
         }}
         transition={{ duration: 1.2 }} // Smooth transition
-        className="relative w-64 h-64 rounded-xl "
+        className="relative w-64 h-64 rounded-xl z-0" // Ensuring this container has a relative z-index
       >
         <img
           className="w-full h-full object-cover object-[60%_80%] rounded-xl"
           src="/assets/hand.jpg"
           alt=""
         />
-        <div className="absolute top-3 right-3 group-hover:bg-pri-4 duration-500 ease-in-out w-full h-full rounded-xl -z-10 bg-sec-4 shadow-sm shadow-sec-4"></div>
+        <div className="absolute top-3 right-3 group-hover:bg-pri-4 duration-500 ease-in-out w-full h-full rounded-xl z-[-1] bg-sec-4 shadow-sm shadow-sec-4"></div>
+        {/* Adjust z-index to z-[-1] */}
       </motion.div>
     </div>
   );
@@ -61,7 +62,7 @@ const Rightside = () => {
         transition={{ duration: 1.2 }} // Smooth transition
         className="w-full h-full flex flex-col gap-1"
       >
-        <h2 className="text-sm font-extrabold text-sec-4">ABOUT ME</h2>
+        <h2 className="text-sm uppercase font-extrabold text-sec-4">ABOUT ME</h2>
         <div className="leading-relaxed flex flex-col gap-2 ">
           <span className="text-lg font-bold">
             A dedicated Front-end Developer based in Albay, Philippines.

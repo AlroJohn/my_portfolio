@@ -1,6 +1,7 @@
 "use client";
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const myName = "Alro John";
 const iconsName = [
@@ -109,12 +110,14 @@ const LeftSide = () => {
         </svg>
       </div>
       <div className="flex justify-start items-center gap-4">
-        <Icon
-          className="cursor-pointer"
-          icon="grommet-icons:github"
-          width="30"
-          height="30"
-        />
+        <Link href="https://github.com/AlroJohn">
+          <Icon
+            className="cursor-pointer"
+            icon="grommet-icons:github"
+            width="30"
+            height="30"
+          />
+        </Link>
         <Icon
           className="text-blue-500 cursor-pointer"
           icon="brandico:linkedin-rect"
@@ -129,9 +132,12 @@ const LeftSide = () => {
         />
       </div>
       <div className="block md:hidden pt-4">
-          <button className="max-w-44 w-full py-2 px-4 rounded-md bg-pri-4 text-pri-3 hover:bg-sec-4 hover:text-pri-4 duration-300" type="button">
-            My Tech Stack
-          </button>
+        <button
+          className="max-w-44 w-full py-2 px-4 rounded-md bg-pri-4 text-pri-3 hover:bg-sec-4 hover:text-pri-4 duration-300"
+          type="button"
+        >
+          My Tech Stack
+        </button>
       </div>
     </div>
   );
@@ -189,7 +195,6 @@ const TechStack = () => {
           ))}
         </motion.div>
       </div>
-      
     </div>
   );
 };

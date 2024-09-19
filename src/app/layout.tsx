@@ -26,9 +26,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-pri-0 text-pri-4 flex flex-col md:max-w-[75%] w-full h-full mx-auto">
-        <HeaderNav />
-        {children}
+      <body className="w-full">
+        <section className="bg-pri-0 text-pri-4 flex flex-col md:max-w-[75%] w-full h-full mx-auto">
+          <HeaderNav />
+          {children}
+        </section>
         <Footer />
       </body>
     </html>
