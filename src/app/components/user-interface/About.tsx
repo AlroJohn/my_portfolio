@@ -13,7 +13,7 @@ export const About = () => {
           once: false, // Repeat animation on scroll
         }}
         transition={{ duration: 1 }}
-        className="w-full max-w-screen-md h-fit flex lg:flex-row flex-col py-4 group  border border-black"
+        className="w-full max-w-screen-md h-fit flex lg:flex-row flex-col py-4 group"
       >
         {/* Left side with the image */}
         <LeftSide />
