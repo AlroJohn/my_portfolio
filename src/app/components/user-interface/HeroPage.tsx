@@ -52,7 +52,7 @@ export const HeroPage = () => {
               initial={{ opacity: 0, x: -150 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1.5 }}
-              className="w-full h-fit flex md:justify-end justify-center"
+              className="w-fit h-fit flex md:justify-end justify-center"
             >
               <LeftSide />
             </motion.div>
@@ -61,7 +61,7 @@ export const HeroPage = () => {
               initial={{ opacity: 0, x: 150 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1.5 }}
-              className="h-fit w-full flex justify-start"
+              className="h-fit w-fit flex justify-start"
             >
               <Rightside />
             </motion.div>
@@ -77,7 +77,7 @@ export const HeroPage = () => {
 const LeftSide = () => {
   return (
     <div className="h-full flex flex-col justify-center items-start gap-4 px-4">
-      <h1 className="lg:text-5xl md:text-4xl text-3xl md:text-left font-extrabold max-w-96">
+      <h1 className="lg:text-5xl md:text-4xl text-3xl md:text-left font-extrabold max-w-96 w-full">
         Front End Web Developer
       </h1>
       <div className=" text-lg font-medium text-left max-w-96 w-full">
@@ -129,8 +129,8 @@ const LeftSide = () => {
         />
       </div>
       <div className="block md:hidden pt-4">
-          <button className="max-w-32 w-full py-2 px-4 rounded-md bg-pri-4 text-pri-3 hover:bg-sec-4 hover:text-pri-4 duration-300" type="button">
-            Tech Stack
+          <button className="max-w-44 w-full py-2 px-4 rounded-md bg-pri-4 text-pri-3 hover:bg-sec-4 hover:text-pri-4 duration-300" type="button">
+            My Tech Stack
           </button>
       </div>
     </div>
@@ -142,18 +142,18 @@ const Rightside = () => {
     <div className="md:w-80 w-full h-80 flex justify-center items-center relative">
       {/* Rotating blue circle with animated border radius */}
       <motion.div
-        className="absolute md:w-72 md:h-72 w-64 h-64 rounded-full shadow-profile shadow-sec-4  overflow-hidden"
+        className="absolute w-64 h-64 rounded-full  shadow-sec-4 border-2 border-sec-4   overflow-hidden"
         animate={{
           borderRadius: [
             "50% 70% 30% 70% / 50% 30% 70% 30%",
             "30% 50% 70% 30% / 50% 50% 30% 50%",
             "50% 30% 30% 70% / 50% 30% 70% 30%",
             "70% 40% 50% 30% / 60% 70% 40% 40%",
-            "50% 40% 50% 70% / 30% 40% 40% 60%",
+            "50% 40% 50% 70% / 40% 40% 40% 60%",
           ],
         }}
         transition={{
-          duration: 5,
+          duration: 10,
           repeat: Infinity,
           ease: "easeInOut",
           repeatType: "mirror", // ensures smooth back-and-forth motion
