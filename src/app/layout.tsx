@@ -32,8 +32,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="w-full">
-        <section className="bg-pri-0 text-pri-4 flex flex-col md:max-w-[75%] w-full h-full mx-auto">
+      <body className="w-full bg-pri-0">
+        <section className="text-pri-4 flex flex-col md:max-w-[75%] w-full h-full mx-auto">
           <HeaderNav />
           {children}
         </section>
