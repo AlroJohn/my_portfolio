@@ -44,10 +44,10 @@ export const HeroPage = () => {
           once: false, // Keeps repeating the animation on scroll
         }}
         transition={{ duration: 1 }} // Adjust transition duration
-        className="w-full max-w-screen-md h-fit flex flex-col gap-8 py-4"
+        className="w-full max-w-screen-md h-fit flex flex-col gap-8 py-4 border border-black"
       >
-        <div className="w-full flex justify-center items-center">
-          <div className="w-fit md:h-80 h-fit flex md:flex-row flex-col-reverse justify-center items-center">
+        <div className="w-full flex justify-center items-center border border-black">
+          <div className="w-fit h-fit flex md:flex-row flex-col-reverse justify-center items-center border border-black">
             {/* left side */}
             <motion.div
               initial={{ opacity: 0, x: -150 }}

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export const About = () => {
   return (
-    <div className="w-full h-[calc(100vh-30dvh)] flex justify-center items-start">
+    <div className="w-full md:h-[calc(100vh-30dvh)] h-fit border border-black flex justify-center items-start">
       <motion.div
         initial={{ opacity: 0, scale: 0.6 }}
         whileInView={{ opacity: 1, scale: 1 }}
