@@ -7,7 +7,7 @@ export const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center md:gap-8 gap-2">
           <img className="w-fit h-8 md:block hidden" src="/images/footer.png" alt="" />
           <h1 className="font-bold text-xs md:block hidden md:text-base max-w-md md:w-full ">
-            Copyright &copy; 2024. All rights are reserved
+            &copy; Copyright 2024 Alro.dev All Rights Reserved
           </h1>
         </div>
 
