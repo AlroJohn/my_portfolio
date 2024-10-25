@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export const About = () => {
   return (
-    <div className="w-full md:h-[calc(100vh-30dvh)] h-fit border border-black flex justify-center items-start">
+    <div className="w-full md:h-[calc(100vh-30dvh)] h-fit flex justify-center items-start">
       <motion.div
         initial={{ opacity: 0, scale: 0.6 }}
         whileInView={{ opacity: 1, scale: 1 }}
@@ -62,7 +62,7 @@ const Rightside = () => {
         transition={{ duration: 1.2 }} // Smooth transition
         className="w-full h-full flex flex-col gap-1"
       >
-        <h2 className="text-sm uppercase font-extrabold text-sec-4">ABOUT ME</h2>
+        <h2 className="text-sm uppercase font-extrabold text-sec-4"><span className="italic">#</span> ABOUT ME</h2>
         <div className="leading-relaxed flex flex-col gap-2 ">
           <span className="text-lg font-bold">
             A dedicated Front-end Developer based in Albay, Philippines.

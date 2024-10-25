@@ -26,6 +26,7 @@ const config: Config = {
       },
       boxShadow: {
         'profile': '0 0px 20px 0px rgba(0, 0, 0, 0.3)',
+        'custom': '5px 5px 10px 5px rgba(0, 0, 0, 0.5)'
       }
       
     },

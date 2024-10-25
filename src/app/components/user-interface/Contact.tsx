@@ -27,7 +27,7 @@ const ContactInfo = () => {
   return (
     <div className="w-full flex flex-col gap-10">
       <div className="flex flex-col gap-1.5">
-        <h1 className="text-sm uppercase font-extrabold text-sec-4">Contact</h1>
+        <h1 className="text-sm uppercase font-extrabold text-sec-4"><span className="italic">#</span> Contact</h1>
         <p className="text-lg font-bold w-full max-w-sm">
           Let&apos;s connect! I&apos;d happy to hear from you.
         </p>

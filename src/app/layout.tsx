@@ -20,7 +20,8 @@ export const metadata: Metadata = {
   icons: {
     icon: {
       url: "/images/fav.png",
-
+      type: "image/png",
+      sizes: "32x32",
     }
   }
 };

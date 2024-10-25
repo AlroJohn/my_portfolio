@@ -44,10 +44,10 @@ export const HeroPage = () => {
           once: false, // Keeps repeating the animation on scroll
         }}
         transition={{ duration: 1 }} // Adjust transition duration
-        className="w-full max-w-screen-md h-fit flex flex-col gap-8 py-4 border border-black"
+        className="w-full max-w-screen-md h-fit flex flex-col gap-8 py-4"
       >
-        <div className="w-full flex justify-center items-center border border-black">
-          <div className="w-fit h-fit flex md:flex-row flex-col-reverse justify-center items-center border border-black">
+        <div className="w-full flex justify-center items-center">
+          <div className="w-fit h-fit flex md:flex-row flex-col-reverse justify-center items-center">
             {/* left side */}
             <motion.div
               initial={{ opacity: 0, x: -150 }}
@@ -118,9 +118,7 @@ const LeftSide = () => {
             height="30"
           />
         </Link>
-        <Link
-          href="https://linkedin.com/in/alro-john-mercado-b676172ba"
-        >
+        <Link href="https://linkedin.com/in/alro-john-mercado-b676172ba">
           <Icon
             className="text-blue-500 cursor-pointer"
             icon="brandico:linkedin-rect"
@@ -195,7 +193,17 @@ const TechStack = () => {
           animate="visible"
         >
           {iconsName.map((icon) => (
-            <motion.div key={icon.id} variants={itemVariants}>
+            <motion.div
+              key={icon.id}
+              variants={itemVariants}
+              animate={{ rotate: 0 }} // Default state to reset rotation
+              whileHover={{
+                rotate: [-5, 5, -5, 5, 0], // Shaking effect
+              }}
+              transition={{
+                duration: 0.5, // Speed of each shake cycle
+              }}
+            >
               <Icon icon={icon.icon} width="35" height="35" />
             </motion.div>
           ))}
