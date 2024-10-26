@@ -12,9 +12,9 @@ export const Contact = () => {
         viewport={{
           amount: 0.5, // Trigger when 50% of the element is in view
           once: false, // Repeat animation on scroll
-        }}
+        }} 
         transition={{ duration: 1 }}
-        className="w-full max-w-4xl h-fit flex lg:flex-row flex-col py-4 lg:px-0 px-6 group"
+        className="w-full max-w-screen-md h-fit flex lg:flex-row flex-col py-4 lg:px-0 px-6 group"
       >
         {/* Left side with the image */}
         <ContactInfo />

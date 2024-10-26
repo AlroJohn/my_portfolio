@@ -1,18 +1,16 @@
+// app/page.tsx
+"use client";
 
-import { HeroPage } from "./components/user-interface/HeroPage";
-import { About } from "./components/user-interface/About";
-import { Projects } from "./components/user-interface/Projects";
-import { Contact } from "./components/user-interface/Contact";
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
-  return (
-    <main
-      className="flex flex-col text-pri-4"
-    >
-      <HeroPage />
-      <About />
-      <Projects />
-      <Contact />
-    </main>
-  );
+  const router = useRouter();
+ 
+  useEffect(() => {
+    // Trigger client-side navigation on load
+    router.push('/alro-dev'); // Replace with your target route
+  }, [router]);
+
+  return null;
 }

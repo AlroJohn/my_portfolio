@@ -35,7 +35,7 @@ const itemVariants = {
 
 export const HeroPage = () => {
   return (
-    <div className="w-full h-[calc(100vh-10dvh)] flex justify-center items-center ">
+    <div className="w-full h-[calc(100vh-10dvh)] pb-[15dvh] flex justify-center items-center ">
       <motion.div
         initial={{ opacity: 0, scale: 0.6 }}
         whileInView={{ opacity: 1, scale: 1 }} // Fades out when the component scrolls out of view
@@ -64,7 +64,7 @@ export const HeroPage = () => {
               transition={{ duration: 1.5 }}
               className="h-fit w-fit flex justify-start"
             >
-              <Rightside />
+              <RightSide />
             </motion.div>
           </div>
         </div>
@@ -78,38 +78,14 @@ export const HeroPage = () => {
 const LeftSide = () => {
   return (
     <div className="h-full flex flex-col justify-center items-start gap-4 px-4">
-      <h1 className="lg:text-5xl md:text-4xl text-3xl md:text-left font-extrabold max-w-96 w-full">
+      <h1 className="lg:text-5xl md:text-4xl text-3xl text-left font-extrabold md:max-w-96 max-w-80 mx-auto w-full">
         Front End Web Developer
       </h1>
-      <div className=" text-lg font-medium text-left max-w-96 w-full">
+      <div className=" text-lg font-medium text-left md:max-w-96 max-w-80 mx-auto w-full">
         Hi, I&apos;m {myName}. A Front-end Web Developer based in Philippines.
-        <svg
-          className="inline-block align-middle"
-          xmlns="http://www.w3.org/2000/svg"
-          width="1.5em"
-          height="1.5em"
-          viewBox="0 0 512 512"
-        >
-          <path
-            fill="#d5dee4"
-            d="M256 504.575c-13.382 0-18.231-10.848-18.231-24.23l-6-323.28c0-13.382 10.848-24.23 24.23-24.23s24.23 10.848 24.23 24.23l-6 323.28c.001 13.382-4.847 24.23-18.229 24.23"
-          />
-          <path
-            fill="#bccbd3"
-            d="M256 132.834c-13.382 0-24.23 10.848-24.23 24.23l1.752 94.386C240.745 253.119 248.27 254 256 254s15.255-.881 22.479-2.549l1.752-94.386c-.001-13.382-10.849-24.231-24.231-24.231"
-          />
-          <circle cx="256" cy="112" r="111" fill="#ff473e" />
-          <ellipse
-            cx="194.399"
-            cy="60.749"
-            fill="#fd7085"
-            rx="19.076"
-            ry="32.428"
-            transform="rotate(33.488 194.39 60.752)"
-          />
-        </svg>
+        <Icon className="inline-block align-middle" icon="fxemoji:roundpushpin" width="27" height="27" />
       </div>
-      <div className="flex justify-start items-center gap-4">
+      <div className="flex items-center gap-4">
         <Link href="https://github.com/AlroJohn">
           <Icon
             className="cursor-pointer"
@@ -135,7 +111,7 @@ const LeftSide = () => {
           />
         </Link>
       </div>
-      <div className="block md:hidden pt-4">
+      <div className="w-full flex justify-start md:hidden pt-4">
         <button
           className="max-w-44 w-full py-2 px-4 rounded-md bg-pri-4 text-pri-3 hover:bg-sec-4 hover:text-pri-4 duration-300"
           type="button"
@@ -147,7 +123,7 @@ const LeftSide = () => {
   );
 };
 
-const Rightside = () => {
+const RightSide = () => {
   return (
     <div className="md:w-80 w-full h-80 flex justify-center items-center relative">
       {/* Rotating blue circle with animated border radius */}
