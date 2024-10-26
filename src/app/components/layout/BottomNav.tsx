@@ -1,5 +1,4 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
-import e from "express";
 import { AnimatePresence, motion } from "framer-motion";
 
 interface BottomNavProps {
