@@ -1,5 +1,4 @@
 import { Icon } from "@iconify/react/dist/iconify.js"
-import { Dispatch, SetStateAction } from "react";
 
 interface HeaderNavProps {
     openAddEvent: () => void;

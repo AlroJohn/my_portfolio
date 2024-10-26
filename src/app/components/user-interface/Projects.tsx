@@ -1,5 +1,5 @@
 "use client";
-import { Icon } from "@iconify/react/dist/iconify.js";
+
 import { AnimatePresence, motion } from "framer-motion";
 
 export const Projects = () => {
@@ -47,6 +47,7 @@ const ProjectCard = () => {
             once: false, // Keeps repeating the animation on scroll
           }}
           transition={{ duration: 1 }} // Adjust transition duration
+          key={index}
           className={`w-full h-fit flex gap-4 items-start justify-center flex-col ${
             index % 2 === 0 ? "md:flex-row-reverse" : "md:flex-row"
           }`}
