@@ -1,6 +1,5 @@
 "use client";
 
-import type { Metadata } from "next";
 import { useState } from "react";
 import { BottomNav } from "../components/layout/BottomNav";
 import { Footer } from "../components/layout/Footer";
@@ -8,7 +7,7 @@ import { HeaderNav } from "../components/layout/HeaderNav";
 
  
 
-export default function RootLayout({
+export default function AlroDevLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
