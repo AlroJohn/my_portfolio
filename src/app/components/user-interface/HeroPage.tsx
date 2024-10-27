@@ -22,15 +22,15 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.3, // Stagger each icon's animation by 0.3 seconds
-      delayChildren: 0.3, // Delay the start of animations for the icons
+      staggerChildren: 0.1, // Stagger each icon's animation by 0.3 seconds
+      delayChildren: 0.1, // Delay the start of animations for the icons
     },
   },
 };
 
 const itemVariants = {
   hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { duration: 0.5 } }, // Each icon will take 0.5 seconds to fade in
+  visible: { opacity: 1, transition: { duration: 0.1 } }, // Each icon will take 0.5 seconds to fade in
 };
 
 export const HeroPage = () => {
