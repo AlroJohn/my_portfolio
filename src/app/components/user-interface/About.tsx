@@ -59,22 +59,29 @@ const RightSide = () => {
         viewport={{
           amount: 0.5, // Trigger animation when 10% of the element is in view
           once: true, // Repeat animation on scroll
-        }} 
+        }}
         transition={{ duration: 1.2 }} // Smooth transition
         className="w-full h-full flex flex-col gap-1"
       >
-        <h2 className="text-sm uppercase font-extrabold text-sec-4"><span className="italic">#</span> ABOUT ME</h2>
+        <h2 className="text-sm uppercase font-extrabold text-sec-4">
+          <span className="italic">#</span> ABOUT ME
+        </h2>
         <div className="leading-relaxed flex flex-col gap-2 ">
           <span className="text-lg font-bold">
-            A dedicated Front-end Developer based in Albay, Philippines.
-            <Icon className="inline-block align-middle" icon="fxemoji:roundpushpin" width="27" height="27" />
+            A dedicated Fullstack Developer based in Albay, Philippines.
+            <Icon
+              className="inline-block align-middle"
+              icon="fxemoji:roundpushpin"
+              width="27"
+              height="27"
+            />
           </span>
           <p className="font-sans">
             I am passionate about creating engaging web-applications. I
             specialize in transforming UI/UX designs into responsive, fully
             functional digital products using the latest technologies. I possess
             an impressive arsenal skill in HTML, CSS, Talwind CSS, Javascript,
-            TypeScript, Angular, Svelte and Next.js..
+            TypeScript..
           </p>
         </div>
       </motion.div>

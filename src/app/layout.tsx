@@ -6,13 +6,13 @@ export const metadata: Metadata = {
   description: "Portfolio of Alro John",
   icons: {
     icon: {
-      url: "/images/fav.png",
+      url: "/images/val_logo.png",
       type: "image/png",
       sizes: "32x32",
     },
   },
 };
- 
+
 export default function RootLayout({
   children,
 }: Readonly<{

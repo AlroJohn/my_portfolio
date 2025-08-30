@@ -6,14 +6,14 @@ import Link from "next/link";
 const myName = "Alro John";
 const iconsName = [
   { id: 1, name: "Firebase", icon: "devicon:firebase" },
-  { id: 2, name: "MySQL", icon: "devicon:mysql-wordmark" },
-  { id: 3, name: "Angular", icon: "devicon:angular" },
-  { id: 4, name: "Svelte", icon: "logos:svelte-icon" },
-  { id: 5, name: "Next.js", icon: "devicon:nextjs" },
-  { id: 6, name: "TypeScript", icon: "devicon:typescript" },
-  { id: 7, name: "JavaScript", icon: "logos:javascript" },
-  { id: 8, name: "HTML", icon: "vscode-icons:file-type-html" },
-  { id: 9, name: "CSS", icon: "devicon:css3" },
+  { id: 2, name: "PostgreSQL", icon: "devicon:postgresql" },
+  { id: 3, name: "TypeScript", icon: "devicon:typescript" },
+  { id: 4, name: "JavaScript", icon: "logos:javascript" },
+  { id: 5, name: "Angular", icon: "devicon:angular" },
+  { id: 6, name: "SolidJS", icon: "devicon:solidjs" },
+  { id: 7, name: "Next.js", icon: "devicon:nextjs" },
+  { id: 8, name: "Svelte", icon: "logos:svelte-icon" },
+  { id: 9, name: "Laravel", icon: "logos:laravel" },
   { id: 10, name: "Tailwind CSS", icon: "devicon:tailwindcss" },
 ];
 
@@ -79,11 +79,16 @@ const LeftSide = () => {
   return (
     <div className="h-full flex flex-col justify-center items-start gap-4 px-4">
       <h1 className="lg:text-5xl md:text-4xl text-3xl text-left font-extrabold md:max-w-96 max-w-80 mx-auto w-full">
-        Front End Web Developer
+        Fullstack Web Developer
       </h1>
       <div className=" text-lg font-medium text-left md:max-w-96 max-w-80 mx-auto w-full">
-        Hi, I&apos;m {myName}. A Front-end Web Developer based in Philippines.
-        <Icon className="inline-block align-middle" icon="fxemoji:roundpushpin" width="27" height="27" />
+        Hi, I&apos;m {myName}. A Fullstack Web Developer based in Philippines.
+        <Icon
+          className="inline-block align-middle"
+          icon="fxemoji:roundpushpin"
+          width="27"
+          height="27"
+        />
       </div>
       <div className="flex items-center gap-4">
         <Link href="https://github.com/AlroJohn">
