@@ -1,21 +1,10 @@
 "use client";
+import { iconsNamePrimary } from "@/app/lib/techstack";
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
 const myName = "Alro John";
-const iconsName = [
-  { id: 1, name: "Firebase", icon: "devicon:firebase" },
-  { id: 2, name: "PostgreSQL", icon: "devicon:postgresql" },
-  { id: 3, name: "TypeScript", icon: "devicon:typescript" },
-  { id: 4, name: "JavaScript", icon: "logos:javascript" },
-  { id: 5, name: "Angular", icon: "devicon:angular" },
-  { id: 6, name: "SolidJS", icon: "devicon:solidjs" },
-  { id: 7, name: "Next.js", icon: "devicon:nextjs" },
-  { id: 8, name: "Svelte", icon: "logos:svelte-icon" },
-  { id: 9, name: "Laravel", icon: "logos:laravel" },
-  { id: 10, name: "Tailwind CSS", icon: "devicon:tailwindcss" },
-];
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -173,7 +162,7 @@ const TechStack = () => {
           initial="hidden"
           animate="visible"
         >
-          {iconsName.map((icon) => (
+          {iconsNamePrimary.map((icon) => (
             <motion.div
               key={icon.id}
               variants={itemVariants}
